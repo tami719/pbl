@@ -6,36 +6,53 @@ import { motion } from "framer-motion";
 import { Image } from "@chakra-ui/image";
 import Script from 'next/script';
 import Link from 'next/link';
-import Styles from './cursor.module.css';
-import Styles2 from './part.module.css';
-import Santa from "./santa.png";
-import Santa2 from "./santa2.png";
-import Tona from "./tona.png";
+import Styles from './css/cursor.module.css';
+import Styles2 from './css/motion.module.css';
+import Santa from "./images/santa.png";
+import Santa2 from "./images/santa2.png";
+import Tona from "./images/tona.png";
+import Tree from "./images/tree.png";
+import Snowball from "./images/snowball.png";
+import Snowball2 from "./images/snowball2.png";
+import Snowball3 from "./images/snowball3.png";
+import Kabo from "./images/kabo.png";
+import Kabo2 from "./images/kabo2.png";
+import Obake from "./images/obake.png";
+import Koumori from "./images/koumori.png";
+import Spider from "./images/spider.png";
+
 
 export const TopWorks = () => {
     const color = useColorModeValue("#006400", "#000")
 
   return (
-    <Box bg={color} opacity="0.8" color="#ffffff" style={{"scroll-behavior": "smooth"}}>
-      <Grid templateColumns='repeat(20, 1fr)' gap={1}>
-     <GridItem colSpan={3}>
-     <Box  h={200}>
+    <Box bg={color} opacity="0.8" color="#ffffff" id="0">
+      <Box textAlign="center">
+       <Box>
+      <Text fontFamily="Impact" fontSize={100} style={{"text-shadow" : "0 0 0.10em #FFD700,	0 0 0.15em #FFD700, 0 0 0.80em #FFD700,	0 0 1.00em #FFD700"}}>
+        kitasan & mila
+      </Text>
       </Box>
+    </Box>
+
+    <Grid templateColumns='repeat(20, 1fr)' gap={1}>
+     <GridItem colSpan={5}>
      <Box display="flex" justifyContent="center" m="auto">
      <Image 
               boxSize="250px"
+              className={Styles2.updown}
               src={Tona.src} />
-
         </Box>
-    </GridItem>
-      <GridItem colSpan={14}>
+      <Box h="10px"></Box>
+     <Box display="flex" justifyContent="center" m="auto">
+     <Image 
+              boxSize="250px"
+              className={Styles2.blinking}
+              src={Spider.src} />
+      </Box>
+      </GridItem>
+     <GridItem colSpan={10}>
       <Box textAlign="center">
-
-        <Box>
-          <Text fontFamily="Impact" fontSize={100} style={{"text-shadow" : "0 0 0.10em #FFD700,	0 0 0.15em #FFD700, 0 0 0.80em #FFD700,	0 0 1.00em #FFD700"}}>
-            kitasan & mila
-          </Text>
-        </Box>
         <Box
           display="flex"
           alignItems="center"
@@ -43,16 +60,13 @@ export const TopWorks = () => {
           mt={10}
           mb={10}
         >
-          
         </Box>
-      </Box>
-
 
         <Box
-        className={Styles.container2}
+        className={Styles.cursor2}
         boxShadow='dark-lg'
           p={10}
-          w="300px"
+          w="260px"
           bg="000"
           border="1px solid #ffffff"
           borderRadius="4px"
@@ -65,14 +79,13 @@ export const TopWorks = () => {
           </Text>
         </Box>
 
-        <Box  h={10}>
-      </Box>
+        <Box  h={10}></Box>
 
         <Box
-        className={Styles.container2}
+        className={Styles.cursor2}
         boxShadow='dark-lg'
           p={10}
-          w="300px"
+          w="260px"
           bg="000"
           border="1px solid #ffffff"
           borderRadius="4px"
@@ -86,13 +99,55 @@ export const TopWorks = () => {
 
       <Box  h={100}>
       </Box>
+      </Box>
+      </GridItem>
+     <GridItem colSpan={5}>
+     <Box display="flex" justifyContent="center" m="auto">
+     <Image 
+              boxSize="250px"
+              className={Styles2.updown}
+              src={Santa.src} />
+        </Box>
+      <Box h="10px"></Box>
+     <Box display="flex" justifyContent="center" m="auto">
+     <Image 
+              boxSize="250px"
+              className={Styles2.updown}
+              src={Kabo2.src} />
+      </Box>
+     </GridItem>
+     </Grid>
 
-      <Divider borderColor="#FFFFFF" w={"100%"} m={"auto"}/>
-
+     <Grid templateColumns='repeat(20, 1fr)' gap={1}>
+     <GridItem colSpan={3}>
+     <Box h="10px"></Box>
+     <Box display="flex" justifyContent="center" m="auto">
+     <Image 
+              boxSize="250px"
+              className={Styles2.updown}
+              src={Snowball.src} />
+      </Box>
+      <Box h="10px"></Box>
+      <Box display="flex" justifyContent="center" m="auto">
+     <Image 
+              boxSize="250px"
+              className={Styles2.updown}
+              src={Kabo.src} />
+        </Box>
+      <Box h="10px"></Box>
+     <Box display="flex" justifyContent="center" m="auto">
+     <Image 
+              boxSize="250px"
+              className={Styles2.updown}
+              src={Snowball2.src} />
+      </Box>
+     </GridItem>
+     <GridItem colSpan={14}>
+     <Divider borderColor="#FFFFFF" w={"100%"} m={"auto"}/>
         <Box h={100}></Box>
 
         <Box pb={20} id="1">
-        <Text fontFamily="fantasy" fontSize={72} className={Styles.fuwafuwa}>
+        <Text fontFamily="fantasy" fontSize={72} className={Styles2.fuwafuwa}>
             Rule
           </Text>
           <Text fontSize="2xl" fontFamily="Rajdhani">
@@ -111,29 +166,64 @@ export const TopWorks = () => {
       </GridItem>
 
       <GridItem colSpan={3}>
-      <Box  h={200}>
-      </Box>
-     <Box display="flex" justifyContent="center" m="auto">
-            <Image 
+      <Box display="flex" justifyContent="center" m="auto">
+     <Image 
               boxSize="250px"
-              src={Santa.src} />
-
+              src={Tree.src} />
         </Box>
+      <Box h="10px"></Box>
+     <Box display="flex" justifyContent="center" m="auto">
+     <Image 
+              boxSize="250px"
+              className={Styles2.updown}
+              src={Koumori.src} />
+      </Box>
+      <Box h="2px"></Box>
+     <Box display="flex" justifyContent="center" m="auto">
+     <Image 
+              boxSize="250px"
+              className={Styles2.updown}
+              src={Koumori.src} />
+      </Box>
     </GridItem>
     </Grid>
 
+    <Grid templateColumns='repeat(10, 1fr)' gap={1}>
+     <GridItem colSpan={3}>
+     <Box display="flex" justifyContent="center" m="auto">
+     <Image 
+              boxSize="250px"
+              className={Styles2.updown}
+              src={Snowball3.src} />
+      </Box>
+     </GridItem>
+     <GridItem colSpan={4}>
+
     <Box textAlign="center">
     <Button colorScheme='teal' variant='outline' color="#FFD700">
-    <Link href='#'>top</Link>
+    <Scroll to="0" smooth={true} >Top</Scroll>
   </Button>
+  <Box>
   <Image 
               boxSize="250px"
               m={"auto"}
+              className={Styles2.updown}
               src={Santa2.src} />
-      </Box>
 
-    <Box  h={200}>
+    <Box  h={50}>
       </Box>
+    </Box>
+    </Box>
+    </GridItem>
+    <GridItem colSpan={3}>
+    <Box display="flex" justifyContent="center" m="auto">
+    <Image 
+              boxSize="250px"
+              className={Styles2.fuwafuwa}
+              src={Obake.src} />
+    </Box>
+     </GridItem>
+    </Grid>
     </Box>
 
   );

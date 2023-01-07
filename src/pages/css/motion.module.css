@@ -1,21 +1,14 @@
-.container {
-  cursor: url(cu.png) 50 50, auto;
+.updown {
+  animation: move-y .8s infinite alternate ease-in-out;
+  display: inline-block;
 }
-
-.container2 {
-  cursor: url(cu2.png) 50 50, auto;
-}
-
-.container3 {
-  cursor: url(cu3.png) 50 50, auto;
-}
-
-.fixed_btn
-{
-  position: fixed;
-  bottom: 10px; 
-  right: 10px;
-  padding: 6px 40px;
+@keyframes move-y {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(15px);
+  }
 }
 
 /* 滑らかに変形して出現 */
@@ -97,4 +90,12 @@
   100% {
     transform: perspective(100px)rotateX(0)rotateY(0);
   }
+}
+
+.blinking{
+  animation:blink 5s ease-in-out infinite alternate;
+}
+@keyframes blink{
+  0% {opacity:0;}
+  100% {opacity:1;}
 }

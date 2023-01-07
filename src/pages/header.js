@@ -1,8 +1,9 @@
 import { Box, Text, Divider, Grid } from "@chakra-ui/layout";
 import { Image } from "@chakra-ui/image";
 import { Link, Button, useColorMode, useColorModeValue } from "@chakra-ui/react";
-import deviceIcon from "./icon3.png";
-import Styles from './cursor.module.css';
+import deviceIcon from "./images/icon3.png";
+import Styles from './css/cursor.module.css';
+import Styles2 from './css/motion.module.css';
 import React from "react";
 //import { MoonIcon, SunIcon} from "@chakra-ui/icons";
 //import MoonButtonIcon from "../images/brand/moon.svg";
@@ -20,59 +21,63 @@ export const Header = () => {
       display="flex"
       justifyContent="center"
       alignItems="center"
-      className={Styles.container3}
+      className={Styles.cursor3}
     >
 
-    <Box display="flex" justifyContent="center" className={Styles.wait}>
+    <Box display="flex" justifyContent="center" className={Styles2.wait}>
             <Image 
               boxSize="80px"
               src={deviceIcon.src} />
         </Box>
-
-      <Divider w={"5%"} borderColor="#fff" opacity="0.5" ml={"5%"} />
-      <Grid templateColumns="repeat(3, 1fr)" gap={6} ml={"5%"} mr={"5%"}>
-
-        <Text
-          fontSize="3xl"
-          fontFamily="cursive"
-          transition="all .0.2s"
-          _hover={{ color:"#FF3333" }}
-        >
-        <Link href="https://tami719.github.io/mysite/">
-          Home
-          </Link>
-        </Text>
-
-        <Text
-          fontSize="3xl"
-          fontFamily="cursive"
-          _hover={{ color:"#FF3333" }}
-        >
-        <Link href="https://tami719.github.io/mysite/introduce_mila/mila.html">
-          mila
-          </Link>
-        </Text>
-
-        <Text
-          fontSize="3xl"
-          fontFamily="cursive"
-          _hover={{ color:"#FF3333" }}
-        >
-        <Link href="https://tami719.github.io/mysite/introduce_galaxy/introduce_galaxy.html">
-          galaxy
-          </Link>
-        </Text>
-      </Grid>
       <Divider
         h={14}
         orientation="vertical"
         borderColor="ffffff"
         opacity="1"
-        mr={"5%"}
+        mr={"3%"}
+        ml={"3%"}
       />
 
-      <Button onClick={toggleColorMode} bg={color} className={Styles.fuwafuwa}>
-        {colorMode === 'light' ? '🎄' : '🎅'}
+        <Text
+          fontSize="3xl"
+          fontFamily="cursive"
+        >
+          author
+        </Text>
+
+      <Divider w={"2%"} borderColor="#fff" opacity="0.5" mr={"1%"} ml={"2%"} />
+
+      <Text
+          fontSize="3xl"
+          fontFamily="cursive"
+          _hover={{ color:"#FF3333" }}
+          mr={"1%"}
+          ml={"1%"}
+        >
+        <Link href="/kitasan">kitasan</Link>
+        </Text>
+
+        <Text
+          fontSize="3xl"
+          fontFamily="cursive"
+          _hover={{ color:"#FF3333" }}
+          mr={"1%"}
+          ml={"1%"}
+        >
+        <Link href="/mila">mila</Link>
+        </Text>
+
+      <Divider
+        h={14}
+        orientation="vertical"
+        borderColor="ffffff"
+        opacity="1"
+        mr={"2%"}
+        ml={"2%"}
+      />
+
+      <Button onClick={toggleColorMode} bg={color} className={Styles2.fuwafuwa}>
+        {colorMode === 'light' ? '🎄' : '🎃'}
       </Button>
     </Box>
   );
